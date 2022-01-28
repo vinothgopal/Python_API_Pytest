@@ -1,0 +1,13 @@
+pytest --json-report -v -s
+pytest --html=report_localhost.html -v -s
+pytest --html=report_localhost.html -v -s --capture sys
+pytest -m Regression
+pytest -m Smoke --html=report_localhost.html -v -s --capture sys
+
+
+**************
+install following lib
+*******************
+pip install pytest
+pip install pytest-html
+pip install pytest-json-report
