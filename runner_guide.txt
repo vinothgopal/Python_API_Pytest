@@ -1,8 +1,11 @@
-pytest --json-report -v -s
-pytest --html=report_localhost.html -v -s
-pytest --html=report_localhost.html -v -s --capture sys
-pytest -m Regression
+
+
+# run smoke case
 pytest -m Smoke --html=report_localhost.html -v -s --capture sys
+pytest -m Smoke --json-report -v -s
+#Run all cases
+pytest --html=report_localhost.html -v -s --capture sys
+pytest --json-report -v -s
 
 
 **************
